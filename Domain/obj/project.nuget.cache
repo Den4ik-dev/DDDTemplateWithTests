@@ -1,0 +1,15 @@
+{
+  "version": 2,
+  "dgSpecHash": "NcA+0IT0FzPturPMSqKBLA1wcRKFM0EwhdoCdmgeNH0AbhaM9CJfFrXiFS71xQ079+UrpbbCnhNvxSq50ibRYg==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\StokovAdmin\\Desktop\\clean arhitecture\\example\\test\\DDDTemplateWithTests\\Domain\\Domain.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\StokovAdmin\\.nuget\\packages\\fluentresults\\3.15.2\\fluentresults.3.15.2.nupkg.sha512",
+    "C:\\Users\\StokovAdmin\\.nuget\\packages\\mediatr\\12.2.0\\mediatr.12.2.0.nupkg.sha512",
+    "C:\\Users\\StokovAdmin\\.nuget\\packages\\mediatr.contracts\\2.0.1\\mediatr.contracts.2.0.1.nupkg.sha512",
+    "C:\\Users\\StokovAdmin\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\8.0.0\\microsoft.extensions.dependencyinjection.abstractions.8.0.0.nupkg.sha512",
+    "C:\\Users\\StokovAdmin\\.nuget\\packages\\microsoft.extensions.logging.abstractions\\6.0.1\\microsoft.extensions.logging.abstractions.6.0.1.nupkg.sha512",
+    "C:\\Users\\StokovAdmin\\.nuget\\packages\\system.threading.tasks.extensions\\4.5.4\\system.threading.tasks.extensions.4.5.4.nupkg.sha512"
+  ],
+  "logs": []
+}

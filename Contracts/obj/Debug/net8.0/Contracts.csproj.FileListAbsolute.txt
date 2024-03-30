@@ -1,0 +1,11 @@
+C:\Users\StokovAdmin\Desktop\clean arhitecture\example\test\DDDTemplateWithTests\Contracts\bin\Debug\net8.0\Contracts.deps.json
+C:\Users\StokovAdmin\Desktop\clean arhitecture\example\test\DDDTemplateWithTests\Contracts\bin\Debug\net8.0\Contracts.dll
+C:\Users\StokovAdmin\Desktop\clean arhitecture\example\test\DDDTemplateWithTests\Contracts\bin\Debug\net8.0\Contracts.pdb
+C:\Users\StokovAdmin\Desktop\clean arhitecture\example\test\DDDTemplateWithTests\Contracts\obj\Debug\net8.0\Contracts.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\StokovAdmin\Desktop\clean arhitecture\example\test\DDDTemplateWithTests\Contracts\obj\Debug\net8.0\Contracts.AssemblyInfoInputs.cache
+C:\Users\StokovAdmin\Desktop\clean arhitecture\example\test\DDDTemplateWithTests\Contracts\obj\Debug\net8.0\Contracts.AssemblyInfo.cs
+C:\Users\StokovAdmin\Desktop\clean arhitecture\example\test\DDDTemplateWithTests\Contracts\obj\Debug\net8.0\Contracts.csproj.CoreCompileInputs.cache
+C:\Users\StokovAdmin\Desktop\clean arhitecture\example\test\DDDTemplateWithTests\Contracts\obj\Debug\net8.0\Contracts.dll
+C:\Users\StokovAdmin\Desktop\clean arhitecture\example\test\DDDTemplateWithTests\Contracts\obj\Debug\net8.0\refint\Contracts.dll
+C:\Users\StokovAdmin\Desktop\clean arhitecture\example\test\DDDTemplateWithTests\Contracts\obj\Debug\net8.0\Contracts.pdb
+C:\Users\StokovAdmin\Desktop\clean arhitecture\example\test\DDDTemplateWithTests\Contracts\obj\Debug\net8.0\ref\Contracts.dll
