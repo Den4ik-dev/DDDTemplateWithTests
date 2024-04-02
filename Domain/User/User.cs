@@ -1,5 +1,4 @@
 ﻿using Domain.Common.Models;
-using Domain.User.Enum;
 using Domain.User.ValueObject;
 
 namespace Domain.User;
@@ -8,7 +7,7 @@ public class User : AggregateRoot<UserId>
 {
     public string Login { get; }
     public Password Password { get; }
-    public string Role { get; } = Roles.STANDARD_USER;
+    public UserRole Role { get; } = UserRole.CreateStandardUserRole();
 
     public string? RefreshToken { get; private set; }
     public DateTime? RefreshTokenExpiryTime { get; private set; }

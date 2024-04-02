@@ -1,5 +1,4 @@
 ﻿using Domain.User;
-using Domain.User.Enum;
 using Domain.User.ValueObject;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
@@ -27,7 +26,10 @@ public class UserConfiguration : IEntityTypeConfiguration<User>
             .HasConversion(password => password.Value, value => Password.Create(value))
             .HasColumnName("password");
 
-        builder.Property(u => u.Role).HasDefaultValue(Roles.STANDARD_USER).HasColumnName("role");
+        builder
+            .Property(u => u.Role)
+            .HasConversion(userRole => userRole.Value, value => UserRole.Create(value))
+            .HasColumnName("role");
 
         builder.Property(u => u.RefreshToken).HasColumnName("refresh_token");
 

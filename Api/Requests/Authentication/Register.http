@@ -4,6 +4,6 @@ POST {{host}}/api/auth/reg
 Content-Type: application/json
 
 {
-  "login": "den",
+  "login": "denis",
   "password": "den12345"
 }

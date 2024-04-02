@@ -51,7 +51,7 @@ public class JwtTokenGenerator
         string accessToken = GenerateAccessToken(
             [
                 new Claim(ClaimTypes.Name, user.Id.Value.ToString()),
-                new Claim(ClaimTypes.Role, user.Role)
+                new Claim(ClaimTypes.Role, user.Role.Value)
             ]
         );
         string refreshToken = GenerateRefreshToken();
