@@ -15,3 +15,4 @@ C:\Users\StokovAdmin\Desktop\clean arhitecture\example\test\DDDTemplateWithTests
 C:\Users\StokovAdmin\Desktop\clean arhitecture\example\test\DDDTemplateWithTests\Application\obj\Debug\net8.0\ref\Application.dll
 C:\Users\StokovAdmin\Desktop\clean arhitecture\example\test\DDDTemplateWithTests\Application\bin\Debug\net8.0\Infrastructure.dll
 C:\Users\StokovAdmin\Desktop\clean arhitecture\example\test\DDDTemplateWithTests\Application\bin\Debug\net8.0\Infrastructure.pdb
+C:\Users\StokovAdmin\Desktop\clean arhitecture\example\test\DDDTemplateWithTests\Application\obj\Debug\net8.0\Application.sourcelink.json

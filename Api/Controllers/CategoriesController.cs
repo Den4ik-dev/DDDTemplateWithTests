@@ -22,9 +22,9 @@ public class CategoriesController : ApiController
     }
 
     [HttpPost]
-    public async Task<IResult> CreateCategory(CreateCategoryDto dto)
+    public async Task<IResult> CreateCategory(CreateCategoryDto createCategoryDto)
     {
-        CreateCategoryCommand command = _mapper.Map<CreateCategoryCommand>(dto);
+        CreateCategoryCommand command = _mapper.Map<CreateCategoryCommand>(createCategoryDto);
 
         Result<CategoryId> result = await _sender.Send(command);
 

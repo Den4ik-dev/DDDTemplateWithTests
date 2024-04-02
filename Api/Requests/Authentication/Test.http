@@ -1,0 +1,4 @@
+﻿@host = https://localhost:7189
+
+GET {{host}}/api/auth/test
+Authorization: Bearer 

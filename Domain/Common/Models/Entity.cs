@@ -38,7 +38,7 @@ public abstract class Entity<TId> : IHasDomainEvents, IEquatable<Entity<TId>>
         return Equals(left, right);
     }
 
-    public static bool operator !=(Entity<TId>? left, Entity<TId> right)
+    public static bool operator !=(Entity<TId>? left, Entity<TId>? right)
     {
         return !Equals(left, right);
     }

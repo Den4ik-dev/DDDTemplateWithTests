@@ -23,9 +23,9 @@ public class ProductsController : ApiController
     }
 
     [HttpPost]
-    public async Task<IResult> CreateProduct(CreateProductDto dto)
+    public async Task<IResult> CreateProduct(CreateProductDto createProductDto)
     {
-        CreateProductCommand command = _mapper.Map<CreateProductCommand>(dto);
+        CreateProductCommand command = _mapper.Map<CreateProductCommand>(createProductDto);
 
         Result<ProductId> result = await _sender.Send(command);
 
@@ -40,9 +40,11 @@ public class ProductsController : ApiController
     }
 
     [HttpPut("{productId:guid}")]
-    public async Task<IResult> ChangeProduct(Guid productId, ChangeProductDto dto)
+    public async Task<IResult> ChangeProduct(Guid productId, ChangeProductDto changeProductDto)
     {
-        ChangeProductCommand command = _mapper.Map<ChangeProductCommand>((productId, dto));
+        ChangeProductCommand command = _mapper.Map<ChangeProductCommand>(
+            (productId, changeProductDto)
+        );
 
         Result result = await _sender.Send(command);
 

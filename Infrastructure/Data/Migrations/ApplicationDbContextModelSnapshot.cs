@@ -75,6 +75,45 @@ namespace Infrastructure.Data.Migrations
                     b.ToTable("products", (string)null);
                 });
 
+            modelBuilder.Entity("Domain.User.User", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .HasColumnType("uniqueidentifier")
+                        .HasColumnName("user_id");
+
+                    b.Property<string>("Login")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(450)")
+                        .HasColumnName("login");
+
+                    b.Property<string>("Password")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)")
+                        .HasColumnName("password");
+
+                    b.Property<string>("RefreshToken")
+                        .HasColumnType("nvarchar(max)")
+                        .HasColumnName("refresh_token");
+
+                    b.Property<DateTime?>("RefreshTokenExpiryTime")
+                        .HasColumnType("datetime2")
+                        .HasColumnName("refresh_token_expiry_time");
+
+                    b.Property<string>("Role")
+                        .IsRequired()
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("nvarchar(max)")
+                        .HasDefaultValue("standard_user")
+                        .HasColumnName("role");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("Login")
+                        .IsUnique();
+
+                    b.ToTable("users", (string)null);
+                });
+
             modelBuilder.Entity("Domain.Category.Category", b =>
                 {
                     b.OwnsMany("Domain.Product.ValueObject.ProductId", "ProductIds", b1 =>

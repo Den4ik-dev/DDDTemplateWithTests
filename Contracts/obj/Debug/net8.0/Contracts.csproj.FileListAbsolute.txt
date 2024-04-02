@@ -9,3 +9,4 @@ C:\Users\StokovAdmin\Desktop\clean arhitecture\example\test\DDDTemplateWithTests
 C:\Users\StokovAdmin\Desktop\clean arhitecture\example\test\DDDTemplateWithTests\Contracts\obj\Debug\net8.0\refint\Contracts.dll
 C:\Users\StokovAdmin\Desktop\clean arhitecture\example\test\DDDTemplateWithTests\Contracts\obj\Debug\net8.0\Contracts.pdb
 C:\Users\StokovAdmin\Desktop\clean arhitecture\example\test\DDDTemplateWithTests\Contracts\obj\Debug\net8.0\ref\Contracts.dll
+C:\Users\StokovAdmin\Desktop\clean arhitecture\example\test\DDDTemplateWithTests\Contracts\obj\Debug\net8.0\Contracts.sourcelink.json
