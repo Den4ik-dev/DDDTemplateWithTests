@@ -6,11 +6,13 @@ namespace Application.IntegrationTests.Common;
 
 public class BaseIntegrationTest : IClassFixture<IntegrationTestWebApplicationFactory>
 {
-    private readonly IServiceScope _scope;
+    protected readonly ISender Sender;
 
     protected BaseIntegrationTest(IntegrationTestWebApplicationFactory factory)
     {
-        _scope = factory.Services.CreateScope();
+        IServiceScope scope = factory.Services.CreateScope();
+
+        Sender = scope.ServiceProvider.GetRequiredService<ISender>();
 
         InitializeDatabase();
     }
@@ -21,13 +23,6 @@ public class BaseIntegrationTest : IClassFixture<IntegrationTestWebApplicationFa
 
         context.Database.EnsureDeleted();
         context.Database.EnsureCreated();
-    }
-
-    protected ISender GetSender()
-    {
-        ISender sender = _scope.ServiceProvider.GetRequiredService<ISender>();
-
-        return sender;
     }
 
     protected ApplicationDbContext CreateDbContext()

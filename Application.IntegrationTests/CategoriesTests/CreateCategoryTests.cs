@@ -19,10 +19,9 @@ public class CreateCategoryTests : BaseIntegrationTest
     {
         // Arrange
         var command = new CreateCategoryCommand("Phones");
-        ISender sut = GetSender();
 
         // Act
-        Result<CategoryId> result = await sut.Send(command);
+        Result<CategoryId> result = await Sender.Send(command);
 
         // Assert
         result.IsSuccess.Should().BeTrue();
@@ -50,10 +49,9 @@ public class CreateCategoryTests : BaseIntegrationTest
         }
 
         var command = new CreateCategoryCommand("Phones");
-        ISender sut = GetSender();
 
         // Act
-        Result<CategoryId> result = await sut.Send(command);
+        Result<CategoryId> result = await Sender.Send(command);
 
         // Assert
         result.IsFailed.Should().BeTrue();

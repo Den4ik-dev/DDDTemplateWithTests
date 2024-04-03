@@ -34,10 +34,8 @@ public class CreateProductTests : BaseIntegrationTest
             category.Id.Value
         );
 
-        ISender sut = GetSender();
-
         // Act
-        Result<ProductId> result = await sut.Send(command);
+        Result<ProductId> result = await Sender.Send(command);
 
         // Assert
         result.IsSuccess.Should().BeTrue();
@@ -72,10 +70,8 @@ public class CreateProductTests : BaseIntegrationTest
             Guid.NewGuid()
         );
 
-        ISender sut = GetSender();
-
         // Act
-        Result<ProductId> result = await sut.Send(command);
+        Result<ProductId> result = await Sender.Send(command);
 
         // Assert
         result.IsFailed.Should().BeTrue();
@@ -117,10 +113,8 @@ public class CreateProductTests : BaseIntegrationTest
             storedCategory.Id.Value
         );
 
-        ISender sut = GetSender();
-
         // Act
-        Result<ProductId> result = await sut.Send(command);
+        Result<ProductId> result = await Sender.Send(command);
 
         // Assert
         result.IsFailed.Should().BeTrue();

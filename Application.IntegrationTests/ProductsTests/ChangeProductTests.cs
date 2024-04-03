@@ -46,10 +46,8 @@ public class ChangeProductTests : BaseIntegrationTest
             finalCategory.Id.Value
         );
 
-        ISender sut = GetSender();
-
         // Act
-        Result result = await sut.Send(command);
+        Result result = await Sender.Send(command);
 
         // Assert
         result.IsSuccess.Should().BeTrue();
@@ -119,10 +117,8 @@ public class ChangeProductTests : BaseIntegrationTest
             category.Id.Value
         );
 
-        ISender sut = GetSender();
-
         // Act
-        Result result = await sut.Send(command);
+        Result result = await Sender.Send(command);
 
         // Assert
         result.IsFailed.Should().BeTrue();
@@ -182,10 +178,8 @@ public class ChangeProductTests : BaseIntegrationTest
             Guid.NewGuid()
         );
 
-        ISender sut = GetSender();
-
         // Act
-        Result result = await sut.Send(command);
+        Result result = await Sender.Send(command);
 
         // Assert
         result.IsFailed.Should().BeTrue();
@@ -227,10 +221,8 @@ public class ChangeProductTests : BaseIntegrationTest
             storedCategory.Id.Value
         );
 
-        ISender sut = GetSender();
-
         // Act
-        Result result = await sut.Send(command);
+        Result result = await Sender.Send(command);
 
         // Assert
         result.IsFailed.Should().BeTrue();
