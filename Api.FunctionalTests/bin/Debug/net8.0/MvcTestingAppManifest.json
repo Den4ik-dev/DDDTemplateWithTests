@@ -1,0 +1,7 @@
+{
+  "Api, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null": "C:\\Users\\StokovAdmin\\Desktop\\clean arhitecture\\example\\test\\DDDTemplateWithTests\\Api",
+  "Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null": "C:\\Users\\StokovAdmin\\Desktop\\clean arhitecture\\example\\test\\DDDTemplateWithTests\\Application",
+  "Contracts, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null": "C:\\Users\\StokovAdmin\\Desktop\\clean arhitecture\\example\\test\\DDDTemplateWithTests\\Contracts",
+  "Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null": "C:\\Users\\StokovAdmin\\Desktop\\clean arhitecture\\example\\test\\DDDTemplateWithTests\\Domain",
+  "Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null": "C:\\Users\\StokovAdmin\\Desktop\\clean arhitecture\\example\\test\\DDDTemplateWithTests\\Infrastructure"
+}
