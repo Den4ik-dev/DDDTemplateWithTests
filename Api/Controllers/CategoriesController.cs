@@ -2,9 +2,11 @@
 using Application.Categories.Commands.CreateCategory;
 using Contracts.Category;
 using Domain.Category.ValueObject;
+using Domain.User.ValueObject;
 using FluentResults;
 using MapsterMapper;
 using MediatR;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Api.Controllers;
@@ -21,7 +23,7 @@ public class CategoriesController : ApiController
         _sender = sender;
     }
 
-    [HttpPost]
+    [HttpPost, Authorize(Roles = Roles.Admin)]
     public async Task<IResult> CreateCategory(CreateCategoryDto createCategoryDto)
     {
         CreateCategoryCommand command = _mapper.Map<CreateCategoryCommand>(createCategoryDto);

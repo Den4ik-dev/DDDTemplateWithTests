@@ -3,9 +3,11 @@ using Application.Products.Commands.ChangeProduct;
 using Application.Products.Commands.CreateProduct;
 using Contracts.Product;
 using Domain.Product.ValueObject;
+using Domain.User.ValueObject;
 using FluentResults;
 using MapsterMapper;
 using MediatR;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Api.Controllers;
@@ -22,7 +24,7 @@ public class ProductsController : ApiController
         _mapper = mapper;
     }
 
-    [HttpPost]
+    [HttpPost, Authorize(Roles = Roles.Admin)]
     public async Task<IResult> CreateProduct(CreateProductDto createProductDto)
     {
         CreateProductCommand command = _mapper.Map<CreateProductCommand>(createProductDto);
@@ -39,7 +41,7 @@ public class ProductsController : ApiController
         return Results.Ok(productId.Value);
     }
 
-    [HttpPut("{productId:guid}")]
+    [HttpPut("{productId:guid}"), Authorize(Roles = Roles.Admin)]
     public async Task<IResult> ChangeProduct(Guid productId, ChangeProductDto changeProductDto)
     {
         ChangeProductCommand command = _mapper.Map<ChangeProductCommand>(
