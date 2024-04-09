@@ -30,7 +30,7 @@ public class GetUserProfileTests : BaseFunctionalTest
 
         var loginDto = new LoginDto("john", "john12345");
 
-        HttpResponseMessage responseWithToken = await Client.PostAsJsonAsync(
+        HttpResponseMessage responseWithToken = await HttpClient.PostAsJsonAsync(
             "api/auth/login",
             loginDto
         );
@@ -39,13 +39,13 @@ public class GetUserProfileTests : BaseFunctionalTest
 
         Token token = (await responseWithToken.Content.ReadFromJsonAsync<Token>())!;
 
-        Client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue(
+        HttpClient.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue(
             JwtBearerDefaults.AuthenticationScheme,
             token.AccessToken
         );
 
         // Act
-        HttpResponseMessage responseWithResult = await Client.GetAsync("api/users");
+        HttpResponseMessage responseWithResult = await HttpClient.GetAsync("api/users");
 
         // Assert
         responseWithResult.EnsureSuccessStatusCode();

@@ -4,11 +4,11 @@ namespace Api.FunctionalTests.Common;
 
 public class BaseFunctionalTest : IClassFixture<FunctionalWebApplicationFactory>
 {
-    protected readonly HttpClient Client;
+    protected readonly HttpClient HttpClient;
 
     protected BaseFunctionalTest(FunctionalWebApplicationFactory factory)
     {
-        Client = factory.CreateClient();
+        HttpClient = factory.CreateClient();
 
         FunctionalTestDatabase.ClearDatabase();
     }
