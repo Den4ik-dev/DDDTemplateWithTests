@@ -39,4 +39,12 @@ public static class IntegrationTestDatabase
 
         return context;
     }
+
+    public static void ClearDatabase()
+    {
+        using ApplicationDbContext context = Create();
+
+        context.Database.EnsureDeleted();
+        context.Database.EnsureCreated();
+    }
 }

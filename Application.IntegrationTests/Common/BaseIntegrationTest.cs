@@ -14,15 +14,7 @@ public class BaseIntegrationTest : IClassFixture<IntegrationTestWebApplicationFa
 
         Sender = scope.ServiceProvider.GetRequiredService<ISender>();
 
-        InitializeDatabase();
-    }
-
-    private void InitializeDatabase()
-    {
-        ApplicationDbContext context = CreateDbContext();
-
-        context.Database.EnsureDeleted();
-        context.Database.EnsureCreated();
+        IntegrationTestDatabase.ClearDatabase();
     }
 
     protected ApplicationDbContext CreateDbContext()

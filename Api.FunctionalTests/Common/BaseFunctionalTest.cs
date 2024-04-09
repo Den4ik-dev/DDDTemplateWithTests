@@ -10,15 +10,7 @@ public class BaseFunctionalTest : IClassFixture<FunctionalWebApplicationFactory>
     {
         Client = factory.CreateClient();
 
-        InitializeDatabase();
-    }
-
-    private void InitializeDatabase()
-    {
-        ApplicationDbContext context = CreateDbContext();
-
-        context.Database.EnsureDeleted();
-        context.Database.EnsureCreated();
+        FunctionalTestDatabase.ClearDatabase();
     }
 
     protected ApplicationDbContext CreateDbContext()
